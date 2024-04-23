@@ -1,0 +1,164 @@
+---
+import Card from '../components/Card.astro';
+
+---
+<section   class="  bg-cover bg-center bg-no-repeat w-full"  >
+    <div class="text-center my-8">
+    <h2 class="text-3xl font-bold text-purple-700 mb-4">Servicios Veterinarios</h2>
+    <span class="text-2xl font-light text-purple-700">Desde vacunas hasta terapia especial.</span>
+    </div>
+    <div id="scroll" class="flex flex-row mx-4 md:mx-16 overflow-x-scroll bg-fondo-servicios-mobile "> 
+    <div id="card"  >
+    <Card
+    cardText="Nuestros profesionales, se encargarán de dar un diagnóstico acertado y oportuno de tu mascota."
+    cardTittle="Consulta veterinaria" 
+    cardImage="src/image/card-consulta-fondo.webp" 
+    cardAltImage="perro  en consulta veterinaria"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="Estaremos atentos de la salud de tu mascota  24 horas al dia, se sentira como en casa hasta que vuelva feliz a tu lado."
+    cardTittle="Hospitalización" 
+    cardImage="src/image/card-hopitalizacion-fondo.webp" 
+    cardAltImage="perro dentro de una jaula recuperandose"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="La rehabilitación de tu mascota es una prioridad, junto a nuestro cirujano tu mascota tendrá una nueva oportunidad."
+    cardTittle="Cirugía y Ortopedia." 
+    cardImage="src/image/card-cirugia-fondo.webp" 
+    cardAltImage="sala de cirugia veterinaria"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="Sabemos que cada segundo cuenta, por eso nuestros profesionales estan siempre atentos para salvar la vida de tu amigo."
+    cardTittle="Urgencias veterinarias" 
+    cardImage="src/image/card-urgencias-fondo.webp" 
+    cardAltImage="medicos veterinarios y paciente"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="Nuestros equipos de vanguardia junto a los mejores profesionales permitirá dar diagnósticos oportunos."
+    cardTittle="Ecografias                 " 
+    cardImage="src/image/card-ecografia-fondo.webp" 
+    cardAltImage="medico veterinario tomando ecografia"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="Previene futuras enfermedades en tu mascota inicia o continua con su plan de vacunacion con nosotros. "
+    cardTittle="Vacunación felina y canina" 
+    cardImage="src/image/card-vacunacion-fondo.webp" 
+    cardAltImage="veterinario aplicando vacuna"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="Los exámenes de laboratorio permiten a nuestros veterinarios elegir el mejor tratamiento para tu amigo de manera oportuna."
+    cardTittle="Examenes de laboratorio" 
+    cardImage="src/image/card-laboratorio-fondo.webp" 
+    cardAltImage="perro tomandole muestra de sangre"
+    cardHref=""
+    />
+    </div>
+    <div id="card">
+    <Card
+    cardText="Haz que la belleza de tu mascota brille con nuestro servicio de peluquería y baño quedara como toda una estrella."
+    cardTittle="Peluquería felina y canina." 
+    cardImage="src/image/card-peluqueria-fondo.webp" 
+    cardAltImage="perro con toalla en la cabeza"
+    cardHref=""
+    />
+    </div>
+    </div>
+</section>
+    
+
+<style> 
+#scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+  background-color: transparent;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  background-color: #00AAE5;
+  border-radius: 20px;
+}
+
+#scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #0077B6;
+}
+
+#scroll::-webkit-scrollbar-thumb:active {
+  background-color: #00AAE5;
+}
+
+#scroll::-webkit-scrollbar-thumb:window-inactive {
+  background-color: #00ace5b6;
+}
+
+#scroll::-webkit-scrollbar-thumb:inactive {
+  background-color: #02b8f5;
+}
+
+</style>
+<script>
+const scrollElement = document.getElementById('scroll');
+const cardElements = document.querySelectorAll('#card');
+
+let animationFrame;
+let speed = 2;
+let animationRunning = true;
+
+window.addEventListener('DOMContentLoaded', () => {
+  startAutoScroll();
+
+  cardElements.forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      speed *= 0.25;
+      animationRunning = true;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      speed /= 0.25;
+      animationRunning = true;
+    });
+  });
+});
+
+function startAutoScroll() {
+  let direction = 1;
+
+  function animate() {
+    if (scrollElement.scrollWidth - scrollElement.scrollLeft <= scrollElement.offsetWidth) {
+      direction = -1;
+    } else if (scrollElement.scrollLeft <= 0) {
+      direction = 1;
+    }
+
+    scrollElement.scrollLeft += direction * speed;
+
+    if (animationRunning) {
+      animationFrame = requestAnimationFrame(animate);
+    } else {
+      setTimeout(animate, 16); // 16ms = 60fps
+    }
+  }
+
+  animationRunning = true;
+  animate();
+
+}
+
+</script>

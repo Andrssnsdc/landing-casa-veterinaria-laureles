@@ -1,0 +1,34 @@
+---
+import BotonWhatsapp from "./BotonWhatsapp.astro";
+import Profesionales from "./Profesionales.astro";
+import Profesionales2 from "./Profesionales2.astro";
+
+
+---
+<section class="flex flex-col  justify-center items-center w-auto ">
+    <img src="src/image/divisor-nosotros.webp" alt="Dibujo gatos" class="h-full w-full object-cover ">
+    <div class="text-center mb-10 md:mb-14">
+    <h2 class="text-3xl font-bold text-purple-700 mb-4">Nosotros</h2>
+    <span class="text-2xl font-light text-purple-700">Conocé más sobre Casa veterinaria Laureles<br> y sus profesionales</span>
+    </div>
+    <Profesionales
+    profesionalTittle='Holman Delgado'
+    profesionalSubTittle="Médico veterinario- Universidad Juan de Castellanos "
+    profesionalText='El Doctor Holman es un profesional con más de 5 años de experiencia enfocada en cirugía y ortopedia, ha sido las manos salvadoras de más de 5000 animalitos que gracias a su profesionalismo recuperaron su calidad vida, él será el encargado de realizar los procedimientos quirúrgicos necesarios para la recuperación de tu mascota, te informara y guiara de manera empática y responsable durante todo el proceso que vivirás junto a tu mascota.'
+    profesionalAltImage=''
+    profesionalImage='src/image/profesional1.webp'/>
+    <Profesionales2
+    profesionalTittle='Maria Alejandra Moreno'
+    profesionalSubTittle="Médica veterinario- Universidad Juan de Castellanos "
+    profesionalText='La Doctora María Alejandra es nuestra profesional encargada de las consultas veterinarias con ella sus pacientes siempre tendrán un trato amoroso, empático y respetuoso, sus años de experiencia junto a su conocimiento le han dado las habilidades necesarias para dar diagnósticos asertivos y oportunos que permiten preservar la salud de tu mascota. Sus recomendaciones y guia seran el camino más adecuado a seguir para que tu amigo tenga una pronta recuperación y lo veas siempre feliz.'
+    profesionalAltImage=''
+    profesionalImage='src/image/profesional2.webp'/>
+    
+    <div class="flex flex-col px-4 lg:px-0 lg:w-9/12  "> 
+        <h2 class="text-center md:text-start text-3xl sm:text-2xl font-bold  text-purple-700 ">Casa Veterinaria Laureles </h2> 
+        <h3 class="text-center md:text-start  text-lg sm:text-xl font-regular  text-purple-700 my-5 md:my-3">Carrera 82, Dg. 73b Sur #15 sur, Bogotá </h3>
+        <p class="md:text-start mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">En Casa Veterinaria Laureles, tu mascota es más que un paciente: es parte de nuestra familia. Nuestro compromiso es brindar cuidado compasivo y profesional, donde cada visita se sienta como en casa. Confía en nuestro equipo dedicado para el bienestar integral de tu compañero peludo. <strong>¡Bienvenido a tu hogar veterinario!</strong></p>
+    </div >  
+    <BotonWhatsapp 
+    textBoton="Solicitar servicio">
+</section>
