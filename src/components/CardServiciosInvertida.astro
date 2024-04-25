@@ -1,0 +1,25 @@
+---
+interface Props {
+	servicioTittle: string;
+	servicioText: string;
+  servicioImage: string;
+  servicioAltImage: string;
+   
+}
+
+const { servicioText,servicioAltImage,servicioImage,servicioTittle, } = Astro.props;
+---
+<article class="px-4 lg:px-0 lg:w-9/12 flex flex-col justify-center items-center  md:flex-row w-full overflow-hidden mb-12">
+      
+    <div class="flex flex-col w-fit  md:w-2/3 "> 
+        <h2 class="text-center md:text-end text-3xl sm:text-2xl font-bold  text-purple-700 ">{servicioTittle}</h2> 
+        
+        <p class="md:text-end mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">{servicioText}</p>
+    </div >     
+ 
+    <div class="relative  md:w-1/3">
+        <img style="mask-image: linear-gradient(white 90%, transparent);" class="z-50  object-containt " src={servicioImage} alt={servicioAltImage} />
+    </div>
+    
+    
+</article>

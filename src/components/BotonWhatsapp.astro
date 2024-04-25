@@ -3,7 +3,7 @@ interface Props {
   textBoton: string;}
 const { textBoton } = Astro.props;
 ---
-<button type="button" class="my-10 md:my-14 scale-[0.63] flex flex-row justify-center items-center text-2xl text-center px-5 py-2.5 gap-x-4 sm:scale-75   lg:scale-100  text-stone-900 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-3xl ">
+<a href="https://api.whatsapp.com/send?phone=+573014588503&text=Hola%20Casa%20veterinaria%20Laureles,%20requiero%20una%20consulta%20o%20cita%20para%20" target="_blank" class=" scale-[0.63] flex flex-row justify-center items-center text-2xl text-center px-5 py-2.5 gap-x-4 sm:scale-75   lg:scale-100  text-stone-900 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-3xl ">
     <svg width="45" height="45" viewBox="0 0 61 60" fill="none">
       <g clip-path="url(#clip0_465_292)">
       <path d="M32.375 0C16.8125 0 4.25 12.5625 4.25 28.125C4.25 34.5 6.3125 40.5 10.25 45.375L6.3125 57.375C6.125 58.125 6.3125 58.875 6.875 59.4375C7.0625 59.8125 7.625 60 8 60C8.1875 60 8.5625 60 8.75 59.8125L21.6875 54C25.0625 55.5 28.625 56.25 32.375 56.25C47.9375 56.25 60.5 43.6875 60.5 28.125C60.5 12.5625 47.9375 0 32.375 0Z" fill="#25D366"/>
@@ -15,4 +15,4 @@ const { textBoton } = Astro.props;
       </clipPath>
       </defs>
       </svg><span class="font-bold">{textBoton}</span>
-</button>
+    </a>

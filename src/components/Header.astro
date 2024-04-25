@@ -2,7 +2,7 @@
 
 ---
 
-<header >
+<header class="header" id="header">
 		
 	<div class="flex items-start justify-between">
 		<div id="logo" >
@@ -18,10 +18,10 @@
 			>
 		</div>
 		<nav
-			class="h-12 md:h-16 bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 items-center grow md:rounded-l-3xl"
+			class=" h-12 md:h-16 bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 items-center grow md:rounded-l-3xl"
 		>
 			<div
-				class=" max-w-screen-xl flex flex-col   "
+				class="max-w-screen-xl flex flex-col   "
 			>
 				<button
 					id="menu-toggle"
@@ -56,7 +56,7 @@
 						 class="min-[1150px]:pl-60 px-5 h-[500px] font-medium pb-40 md:pb-0 flex flex-col justify-around  items-start md:h-16 md:self-start   md:rounded-l-3xl md:p-1  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 dark:bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 dark:border-gray-700"
 					>
 						<li>
-							<a href="../pages/index"
+							<a href="/"
 								class="h-14 flex items-center justify-center flex-row gap-6 hover:border-b-4 hover:border-sky-500 hover:bottom-0 hover:rounded-ls box-sizing:border-box"
 							>
 								<svg
@@ -104,7 +104,7 @@
 						</li>
 						<li>
 							<a
-								href="../pages/vidas-salvadas"
+								href="/servicios"
 								class="h-14 flex items-center justify-center flex-row gap-6 hover:border-b-4 hover:border-sky-500 hover:bottom-0 hover:rounded-ls box-sizing:border-box"
 							>
 								<svg
@@ -168,7 +168,7 @@
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/vidas"
 								class="h-14 flex items-center justify-center flex-row gap-6 hover:border-b-4 hover:border-sky-500 hover:bottom-0 hover:rounded-ls box-sizing:border-box"
 							>
 								<svg
@@ -233,7 +233,7 @@
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/nosotros"
 								class="h-14 flex items-center justify-center flex-row gap-6 hover:border-b-4 hover:border-sky-500 hover:bottom-0 hover:rounded-ls box-sizing:border-box"
 							>
 								<svg
@@ -306,6 +306,7 @@
 	</div>
 </header>
 <style>
+	
 #logo{
 	display: none;
   }
@@ -320,6 +321,26 @@
   gap: 3px;
   }
 }
+
+.header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: #fff;
+        transition: top 3.5s linear;
+		z-index: 100;
+    }
+
+    .header-hidden {
+        top: -100%; 
+    }
+
+    .header-visible {
+        top: 0; 
+    }
+
+
 </style>
 
 
@@ -357,5 +378,45 @@
 		}
 	  }
 	});
+
+	let lastScrollTop = 0;
+	let ticking = false;
+
+function handleScroll() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        hideHeader();
+    } else {
+        showHeader();
+    }
+
+    lastScrollTop = currentScroll;
+}
+
+function hideHeader() {
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            document.getElementById("header").style.transitionDuration = "0.9s"; // Duración de la animación
+            document.getElementById("header").style.top = "-100%";
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+function showHeader() {
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            document.getElementById("header").style.transitionDuration = "0.9s"; // Duración de la animación
+            document.getElementById("header").style.top = "0";
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
+
 	</script>
 	

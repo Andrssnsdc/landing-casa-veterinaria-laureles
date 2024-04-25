@@ -1,13 +1,7 @@
 ---
 import '@fontsource-variable/onest';
 import Header from '../components/Header.astro';
-import Banner from '../components/Banner.astro';
-import Servicios from '../components/Servicios.astro';
-import Botoncenter from '../components/Botoncenter.astro';
-import VidasSalvadas from '../components/VidasSalvadas.astro';
-import Nosotros from '../components/Nosotros.astro';
-import PruebasSociales from '../components/PruebasSociales.astro';
-import Ubicacion from '../components/Ubicacion.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -23,24 +17,18 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/src/image/logofav.png" />		
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-	<div class="absolute top-0 z-[-2] h-screen w-screen   bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] ">
+	<body class="absolute top-0 z-[-2] h-screen w-screen absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
+	
 		<Header/>
 			<main>
-			<Banner/>
-			<Servicios />
-			<Botoncenter/>
-			<VidasSalvadas/>
-			<Nosotros/>
-			<PruebasSociales/>
-			<Ubicacion>
 			<slot />
 			</main>
-	</div>
+		<Footer>	
+	
 	</body>
 </html>
 <style is:global>
