@@ -1,24 +1,183 @@
 ---
-import CardServicios from "./CardServicios.astro";
-import CardServiciosInvertida from "./CardServiciosInvertida.astro";
+import BotonWhatsapp from "./BotonWhatsapp.astro";
+import BotonWhatsappRedondo from "./BotonWhatsappRedondo.astro";
 
 
 ---
 
 
-<section>
+<section class=" w-auto mx-4 md:mx-16 mb-14"> 
+    <div class="text-center my-16 ">
+    <h2 class="text-3xl font-bold text-purple-700 mb-2">SERVICIOS VETERINARIOS</h2>
+    <span class="text-2xl font-light text-purple-700">Encuentra todo en un solo lugar</span>
+    
+    </div>
+    <div class=" flex justify-end mr-2 md:mr-4 sticky top-24 xl:mr-40  z-[100] overflow-y-auto"  >
+    <BotonWhatsappRedondo/>
+    </div>
+    <div class="flex flex-col   items-center">
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:mr-12 " >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 [280px] h-[420px] object-containt rounded-lg " src="src/image/card-consulta-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Consulta veterinaria</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+          <li> <strong class="font-semibold">Por dolor inexplicable</strong> o <strong class="font-semibold">cojera en extremidades</strong>, para diagnóstico rápido y preciso.</li>
+          <li>Evaluación veterinaria <strong class="font-semibold">por pérdida de apetito</strong> o <strong class="font-semibold">cambios en hábitos alimenticios</strong>, con atención profesional y empática.</li>
+          <li>Tratamiento veterinario <strong class="font-semibold">para vómitos y diarrea</strong> persistentes, garantizando el bienestar de tu mascota.</li>
+          <li>Diagnóstico y manejo de <strong class="font-semibold">alergias cutáneas</strong>, asegurando la salud de tu mascota.</li>
+          <li>Atención especializada para <strong class="font-semibold"> problemas urinarios</strong> en mascotas, con cuidado experto y soluciones efectivas.</li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col  items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:ml-12 md:order-2 order-1" >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-urgencias-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 md:order-1 order-2 md:ml-12 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Urgencias veterinarias</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li>Evaluación rápida, <strong class="font-semibold">tratamiento de heridas y lesiones en mascotas</strong>, garantizando cuidado urgente y efectivo.</li>
+            <li>Atención inmediata<strong class="font-semibold"> para casos de envenenamiento o intoxicación</strong>, con diagnóstico y tratamiento urgentes.</li>
+            <li>Estabilización y manejo de emergencias médicas, como <strong class="font-semibold">convulsiones o dificultad respiratoria</strong>, asegurando una atención oportuna.</li>
+            <li><strong class="font-semibold">Radiografías, ecografías y análisis de laboratorio urgentes </strong>para diagnóstico rápido de problemas de salud, con resultados precisos.</li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:mr-12 " >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-ecografia-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Ecografías</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li><strong class="font-semibold">Evaluación de órganos internos </strong>para diagnóstico de enfermedades abdominales.</li>
+            <li><strong class="font-semibold">Seguimiento embarazo en mascotas</strong>, incluyendo <strong class="font-semibold">control prenatal y monitoreo fetal</strong>.</li>
+            <li>Diagnóstico de enfermedad cardíaca y <strong class="font-semibold">evaluación de la función cardíaca</strong>.</li>
+            <li>Detección y seguimiento de <strong class="font-semibold">masas o tumores internos.</strong></li>
+            <li><strong class="font-semibold">Evaluación del tracto urinario</strong> para diagnóstico de <strong class="font-semibold">enfermedades renales o del tracto urinario</strong> inferior.</li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col  items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:ml-12 md:order-2 order-1" >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-peluqueria-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 md:order-1 order-2 md:ml-12 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Peluquería felina y canina</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li><strong class="font-semibold">Baño completo</strong> con champú y acondicionador adecuados para cada tipo de pelaje.</li>
+            <li><strong class="font-semibold">Corte de pelo</strong> y arreglo estético según las preferencias del dueño y las necesidades de la mascota.</li>
+            <li>Limpieza e <strong class="font-semibold">higiene de oídos.</strong></li>
+            <li><strong class="font-semibold">Corte de uñas,</strong> para evitar problemas de salud y lesiones.</li>
+            <li>Tratamientos de spa adicionales, como hidratación profunda del pelaje o <strong class="font-semibold">aplicaciones de fragancias.</strong></li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:mr-12 " >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-hopitalizacion-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Hospitalización</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li><strong class="font-semibold">Monitoreo constante </strong>del estado de salud y signos vitales de tu mascota.</li>
+            <li><strong class="font-semibold">Administración de medicamentos </strong>y tratamientos según las necesidades que tenga tu mascota.</li>
+            <li><strong class="font-semibold">Fluidoterapia y alimentación intravenosa </strong>para garantizar la hidratación y nutrición adecuadas.</li>
+            <li>Control del dolor y manejo de síntomas para mejorar el bienestar del paciente.</li>
+            <li><strong class="font-semibold">Atención veterinaria especializada</strong> y cuidado compasivo las <strong class="font-semibold">24 horas del día.</strong></li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col  items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:ml-12 md:order-2 order-1" >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-cirugia-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 md:order-1 order-2 md:ml-12 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Cirugía y Ortopedia</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li><strong class="font-semibold">Evaluación preoperatoria </strong>exhaustiva para garantizar la seguridad del paciente y el éxito del procedimiento.</li>
+            <li><strong class="font-semibold">Cirugías de tejidos blandos </strong>y procedimientos quirúrgicos especializados para abordar problemas como <strong class="font-semibold">tumores, heridas profundas, esterilización, cesárea o hernias</strong>.</li>
+            <li><strong class="font-semibold">Cirugía ortopédica para corrección de fracturas</strong>, luxaciones y otras lesiones musculoesqueléticas, con enfoque en la <strong class="font-semibold">restauración de la movilidad y la función.</strong></li>
+            <li><strong class="font-semibold">Implantes ortopédicos</strong> y dispositivos de fijación para <strong class="font-semibold">estabilización de huesos y articulaciones</strong>, mejorando la calidad de vida del paciente.</li>
+            <li><strong class="font-semibold">Rehabilitación postoperatoria </strong>y seguimiento personalizado para asegurar una recuperación completa y duradera, promoviendo una rápida vuelta a la actividad normal de la mascota.</li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:mr-12 " >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-vacunacion-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 self-start"> 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Vacunación de perros y gatos</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li>Vacunación veterinaria <strong class="font-semibold">para prevenir enfermedades infecciosas </strong>y proteger la salud de tu mascota a largo plazo.</li>
+            <li><strong class="font-semibold">Programa de vacunación adaptado</strong> a las necesidades específicas de tu mascota para brindar una protección efectiva.</li>
+            <li><strong class="font-semibold">Vacunación para cachorros y adultos</strong>, siguiendo las pautas recomendadas por los expertos veterinarios.</li>
+            <li>Vacunación contra enfermedades comunes como la <strong class="font-semibold">rabia, parvovirus y moquillo</strong> para mantener a tu mascota saludable y feliz.</li>
+            <li>Vacunas específicas para gatos, incluyendo protección contra la <strong class="font-semibold">rinotraqueitis felina, el calicivirus felino, la leucemia felina y rabia </strong>garantizando su bienestar óptimo.</li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<article class=" px-4 lg:px-0 lg:w-9/12 flex flex-col  items-center   md:flex-row w-full overflow-hidden mb-12">
+    
+    <div class="relative  mb-8  md:ml-12 md:order-2 order-1" >
+        <img style="mask-image: linear-gradient(white 80%, transparent);" class="z-50 w-[280px] h-[420px] object-none rounded-lg " src="src/image/card-laboratorio-fondo.webp "alt=" "/>
+    </div>
+    
+      <div class="flex flex-col w-fit  md:w-2/3 md:order-1 order-2 md:ml-12 self-start mb-14" > 
+        <h2 class="text-center  text-3xl  font-bold  mb-8 text-purple-700 ">Examenes de laboratorio</h2> 
+        
+        <ul class="md:text-start leading-relaxed  space-y-2 font-light leading-normal text-stone-900  text-lg sm:text-xl list-disc">
+            <li>Nuestros exámenes de laboratorio ofrecen un análisis exhaustivo <strong class="font-semibold"></strong>para identificar cualquier problema de salud en tu mascota</strong>.</li>
+            <li>Realizamos exámenes de laboratorio regularmente <strong class="font-semibold">para controlar el progreso y la respuesta al tratamiento de enfermedades crónicas</strong> como la diabetes o enfermedad renal.</li>
+            <li>Antes de cualquier procedimiento quirúrgico, llevamos a cabo exámenes de laboratorio para evaluar la salud general de tu mascota y<strong class="font-semibold"> minimizar los riesgos durante la cirugía.</strong></li>
+            <li>Como parte de un <strong class="font-semibold">chequeo de salud de rutina</strong>, nuestros exámenes de laboratorio proporcionan información vital sobre la salud de tu mascota, detectando cualquier <strong class="font-semibold">problema en etapas tempranas.</strong></li>
+        </ul>
+    
+    </div >     
+ 
+</article>
+<BotonWhatsapp
+textBoton="Quiero solicitar un servicio"/>
 
-    <CardServicios/
-    servicioTittle="Consulta veterinaria"
-    servicioText="Consulta veterinaria por dolor inexplicable o cojera en extremidades, para diagnóstico rápido y preciso. Evaluación veterinaria por pérdida de apetito o cambios en hábitos alimenticios, con atención profesional y empática. Tratamiento veterinario para vómitos y diarrea persistentes, garantizando el bienestar de tu mascota. Diagnóstico y manejo de alergias cutáneas, asegurando la salud de tu mascota. Atención especializada para problemas urinarios en mascotas, con cuidado experto y soluciones efectivas."
-    servicioImage=""
-    servicioAltImage=""
-    >
-    <CardServiciosInvertida/
-    servicioTittle=""
-    servicioText=""
-    servicioImage=""
-    servicioAltImage=""
-    >
 
+
+    </div>
 </section>

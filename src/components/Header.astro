@@ -397,7 +397,7 @@ function handleScroll() {
 function hideHeader() {
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            document.getElementById("header").style.transitionDuration = "0.9s"; // Duración de la animación
+            document.getElementById("header").style.transitionDuration = "0.4s"; // Duración de la animación
             document.getElementById("header").style.top = "-100%";
             ticking = false;
         });
@@ -408,7 +408,7 @@ function hideHeader() {
 function showHeader() {
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            document.getElementById("header").style.transitionDuration = "0.9s"; // Duración de la animación
+            document.getElementById("header").style.transitionDuration = "0.5s"; // Duración de la animación
             document.getElementById("header").style.top = "0";
             ticking = false;
         });
