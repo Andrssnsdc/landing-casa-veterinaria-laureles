@@ -12,7 +12,7 @@ const { profesionalAltImage,profesionalImage,profesionalTittle, profesionalSubTi
 <article class="px-4 lg:px-0 lg:w-9/12 flex flex-col justify-center items-center  md:flex-row w-full overflow-hidden mb-12">
     
     <div class="relative md:w-1/2 md:order-2">
-        <img class="-z-10  rounded-full absolute inset-0  animate-spin " src="../fondo-profesionales.webp " alt=""/>
+        <img class="-z-10  rounded-full absolute inset-0  animate-spin " src="../fondo-profesionales.webp" alt=""/>
 
         <img style="mask-image: linear-gradient(white 90%, transparent);" class="z-50  object-cover" src={profesionalImage} alt={profesionalAltImage} />
       </div>
@@ -55,7 +55,7 @@ const { profesionalAltImage,profesionalImage,profesionalTittle, profesionalSubTi
   // Opciones para el observador
   const options = {
     root: null, // Utiliza el viewport como área de observación
-    threshold: 0.80 // Se activa cuando el 50% del elemento está visible
+    threshold: 0.5 // Se activa cuando el 50% del elemento está visible
   };
   
   // Crear un observador
