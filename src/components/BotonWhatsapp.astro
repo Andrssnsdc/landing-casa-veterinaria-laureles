@@ -31,11 +31,11 @@ const { textBoton } = Astro.props;
     // Función para limpiar el estado del elemento y reiniciar la animación
     function resetElement(element) {
       // Eliminar clases de animación
-      element.classList.remove('animate-jump', 'animate-once', 'animate-ease-in');
+      element.classList.remove('animate-jump', 'animate-once', 'animate-ease-in', );
       // Forzar un reflow para que se apliquen los cambios
       void element.offsetWidth;
       // Agregar clases de animación nuevamente
-      element.classList.add('animate-jump', 'animate-once', 'animate-ease-in');
+      element.classList.add('animate-jump', 'animate-once', 'animate-ease-in', 'animate-delay-[4000ms]');
     }
     
     // Opciones para el observador
