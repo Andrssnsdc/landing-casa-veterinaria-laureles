@@ -9,11 +9,60 @@ interface Props {
 
 const { historiaText,historiaAltImage,historiaImage,historiaTittle,} = Astro.props;
 ---
-<article class="px-4 lg:px-0 lg:w-9/12">
+<article  class="px-4 lg:px-0 lg:w-9/12" >
     <div  class="flex flex-col justify-center items-center  md:flex-row w-full md:gap-x-24  ">
-      <div class="flex flex-col   md:w-1/2 ">  
-        <img class=" bg-fondo-imagen-vidas bg-center bg-no-repeat bg-contain object-cover  px-12 pt-12  " src={historiaImage} alt={historiaAltImage}>
+      <div  class="flex flex-col   md:w-1/2 ">  
+        <img class="historia1 invisible  bg-fondo-imagen-vidas bg-center bg-no-repeat bg-contain object-cover  px-12 pt-12  " src={historiaImage} alt={historiaAltImage}>
         <h3 class="  text-center text-2xl sm:text-3xl font-bold  text-purple-700 ">{historiaTittle}</h3>
     </div >
            <p class="font-light leading-normal text-purple-700 md:w-1/2 text-lg sm:text-xl ">{historiaText}</p>
 </article>
+
+<script>
+  // Función para manejar las intersecciones
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      // Verificar si el elemento es visible
+      if (entry.isIntersecting) {
+        // Quitar la clase "hidden" para hacer visible el elemento
+        entry.target.classList.remove('invisible');
+        
+        // Limpiar el estado del elemento y reiniciar la animación
+        resetElement(entry.target);
+        
+        // Desactivar el observador una vez que se ha activado la animación
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+  
+  // Función para limpiar el estado del elemento y reiniciar la animación
+  function resetElement(element) {
+    // Eliminar clases de animación
+    element.classList.remove('animate-jump-in', 'animate-once', 'animate-fill-forwards', 'visible');
+    // Forzar un reflow para que se apliquen los cambios
+    void element.offsetWidth;
+    // Agregar clases de animación nuevamente
+    element.classList.add('animate-jump-in', 'animate-once', 'animate-fill-forwards', 'visible');
+  }
+  
+  // Opciones para el observador
+  const options = {
+    root: null, // Utiliza el viewport como área de observación
+    threshold: 0.75 // Se activa cuando el 50% del elemento está visible
+  };
+  
+  // Crear un observador
+  const observer = new IntersectionObserver(handleIntersection, options);
+  
+  // Seleccionar todos los elementos con la clase "historia1"
+  const targets = document.querySelectorAll('.historia1');
+  
+  // Observar cada elemento
+  targets.forEach(target => {
+    observer.observe(target);
+  });
+  </script>
+  
+
+</script>

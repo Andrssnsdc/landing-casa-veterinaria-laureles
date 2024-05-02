@@ -14,9 +14,46 @@ const { historiaText,historiaAltImage,historiaImage,historiaTittle,} = Astro.pro
     
     <div  class="flex flex-col justify-center items-center  md:flex-row w-full h-full md:gap-x-24  ">
       <div class="flex flex-col    md:w-1/2 ">  
-        <img class=" bg-fondo-imagen-vidas2 bg-center bg-cover bg-contain object-cover  px-12 pt-12  " src={historiaImage} alt={historiaAltImage}>
+        <img  class="historia2 invisible bg-fondo-imagen-vidas2 bg-center bg-cover bg-contain object-cover  px-12 pt-12  " src={historiaImage} alt={historiaAltImage}>
         <h3 class="text-center text-2xl sm:text-3xl font-bold  text-purple-700 ">{historiaTittle}</h3> 
     </div >
    <p class=" order-last md:order-first  font-light leading-normal text-purple-700 md:w-1/2 text-lg sm:text-xl  ">{historiaText}</p>
            
 </article>
+<script >
+  // Función para manejar las intersecciones
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      // Verificar si el elemento es visible
+      if (entry.isIntersecting) {
+        // Quitar la clase "hidden" para hacer visible el elemento
+        entry.target.classList.remove('invisible');
+        
+        // Agregar clases de animación cuando el elemento es visible
+        entry.target.classList.add('animate-jump-in', 'animate-once', 'animate-fill-forwards');
+        
+        // Desactivar el observador una vez que se ha activado la animación
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+  
+  // Opciones para el observador
+  const options = {
+    root: null, // Utiliza el viewport como área de observación
+    threshold: 0.75 // Se activa cuando el 50% del elemento está visible
+  };
+  
+  // Crear un observador
+  const observer = new IntersectionObserver(handleIntersection, options);
+  
+  // Seleccionar todos los elementos con la clase "boton-whatsapp"
+  const targets = document.querySelectorAll('.historia2');
+  
+  // Observar cada elemento
+  targets.forEach(target => {
+    observer.observe(target);
+  });
+  
+  </script>
+  

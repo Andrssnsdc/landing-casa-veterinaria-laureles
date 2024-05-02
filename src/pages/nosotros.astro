@@ -1,8 +1,51 @@
 ---
+import BotonInstagram from "../components/BotonInstagram.astro";
+import BotonWhatsapp from "../components/BotonWhatsapp.astro";
+import Galeria from "../components/Galeria.astro";
+import Profesionales from "../components/Profesionales.astro";
+import Profesionales2 from "../components/Profesionales2.astro";
+import Ubicacion from "../components/Ubicacion.astro";
+import VisionMision from "../components/VisionMision.astro";
 import Layout from "../layouts/Layout.astro";
 
 ---
 <Layout title="Nosotros"
 description="Conoce mas sobre nuestras instalaciones y el equipo de profesionales veterinarios que te prestaran servicio en nuestra clinica veterinaria ">
+ <Galeria/>
+ <section class="flex flex-col  justify-center items-center w-auto ">
+    <Profesionales
+    profesionalTittle='Holman Delgado'
+    profesionalSubTittle="Médico veterinario- Universidad Juan de Castellanos "
+    profesionalText='El Doctor Holman es nuestro cirujano veterinario con más de 5 años de experiencia enfocada en cirugía y ortopedia, ha sido las manos salvadoras de más de 5000 animalitos que gracias a su profesionalismo recuperaron su calidad vida, él será el encargado de realizar los procedimientos quirúrgicos necesarios para la recuperación de tu mascota, te informara, guiara de manera empática y responsable durante todo el proceso que vivirás junto a tu mascota.'
+    profesionalAltImage=''
+    profesionalImage='src/image/profesional1.webp'/>
+    <Profesionales2
+    profesionalTittle='Maria Alejandra Moreno'
+    profesionalSubTittle="Médica veterinaria- Universidad Juan de Castellanos "
+    profesionalText='La Doctora María Alejandra es nuestra profesional encargada de las consultas veterinarias con ella sus pacientes siempre tendrán un trato amoroso, empático y respetuoso, sus años de experiencia junto a su conocimiento le han dado las habilidades necesarias para dar diagnósticos asertivos y oportunos que permiten preservar la salud de tu mascota. Sus recomendaciones y guia seran el camino más adecuado a seguir para que tu amigo tenga una pronta recuperación y lo veas siempre feliz.'
+    profesionalAltImage=''
+    profesionalImage='src/image/profesional2.webp'/>
+    <VisionMision/>
+    <div class=" flex flex-col md:items-center md:justify-center">
+    <div class="md:absolute z-10 flex   justify-center items-center w-auto  "><BotonWhatsapp /
+    textBoton="Habla con nosotros"> </div>
+    <img src="src/image/linea-division.webp" alt="fotografia varias especies de animales" style="mask-image: linear-gradient(white 88%, transparent);" class="md:relative z-0 h-full w-full object-cover ">
+</section> 
+<section class="flex flex-col  justify-center items-center w-auto my-16 px-4 lg:px-0">
+    <div class="text-center ">
+        <h2 class="text-3xl font-bold text-purple-700 mb-4">Somos una veterinaria en Bogotá </h2>
+        <h3 class="text-2xl font-light text-purple-700"> En la que puedes confiar, como ya lo han hecho muchas personas,<br> algunas muestran esta confianza y agradecimiento <strong class="font-bold"> en los comentarios de Google </strong> </h3>
+      </div>
+</section>
+      <div class=" my-10 md:my-14 ">
+          <iframe src="https://2de01dd5e4e94db0b5414c6b79dbce96.elf.site" width="100%" height="1000" class="overflow-hidden"></iframe>
+      </div>
+    <Ubicacion/>
+    <div  class="flex   justify-center items-center w-auto ">
+    <BotonInstagram/
+    textBoton="Siguenos">
+    </div>
+   
 
+ 
 </Layout>

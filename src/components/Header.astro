@@ -2,7 +2,7 @@
 
 ---
 
-<header class="header" id="header">
+<header   class="header" id="header">
 		
 	<div class="flex items-start justify-between">
 		<div id="logo" >
@@ -23,12 +23,13 @@
 			<div
 				class="max-w-screen-xl flex flex-col   "
 			>
-				<button
+				<button 
 					id="menu-toggle"
 					type="button"
 					class="inline-flex items-center p-2 w-12 h-12 justify-center text-sm text-zinc-100 md:hidden"
 					aria-controls="navbar-default"
-					aria-expanded="false"
+					aria-expanded="false"	
+					
 				>
 					<span class="sr-only">Open main menu</span>
 					<svg
@@ -305,7 +306,7 @@
 		
 	</div>
 </header>
-<style>
+<style >
 	
 #logo{
 	display: none;
@@ -346,7 +347,7 @@
 
 
 
-<script>
+<script client:load>
 	document.addEventListener("DOMContentLoaded", function () {
 	  const menuToggle = document.getElementById("menu-toggle");
 	  const navbarDefault = document.getElementById("navbar-default");
@@ -397,7 +398,7 @@ function handleScroll() {
 function hideHeader() {
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            document.getElementById("header").style.transitionDuration = "0.4s"; // Duración de la animación
+            document.getElementById("header").style.transitionDuration = "0.3s"; // Duración de la animación
             document.getElementById("header").style.top = "-100%";
             ticking = false;
         });
@@ -408,7 +409,7 @@ function hideHeader() {
 function showHeader() {
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            document.getElementById("header").style.transitionDuration = "0.5s"; // Duración de la animación
+            document.getElementById("header").style.transitionDuration = "0.3s"; // Duración de la animación
             document.getElementById("header").style.top = "0";
             ticking = false;
         });

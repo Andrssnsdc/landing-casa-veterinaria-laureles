@@ -18,10 +18,59 @@ const { profesionalText,profesionalAltImage,profesionalImage,profesionalTittle, 
         <img style="mask-image: linear-gradient(white 90%, transparent);" class="z-50  object-cover" src={profesionalImage} alt={profesionalAltImage} />
       </div>
     
-      <div class="flex flex-col   md:w-1/2 "> 
-        <h2 class="   text-center md:text-start text-3xl sm:text-2xl font-bold  text-purple-700 ">{profesionalTittle}</h2> 
-        <h3 class="   text-center md:text-start text-lg sm:text-xl font-regular  text-purple-700 my-5 md:my-3">{profesionalSubTittle}</h3>
-        <p class="  mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">{profesionalText}</p>
+      <div class=" flex flex-col   md:w-1/2 "> 
+        <h2 class="profesional2 opacity-0   text-center md:text-start text-3xl sm:text-2xl font-bold  text-purple-700 ">{profesionalTittle}</h2> 
+        <h3 class="profesional2 opacity-0   text-center md:text-start text-lg sm:text-xl font-regular  text-purple-700 my-5 md:my-3">{profesionalSubTittle}</h3>
+        <p class="profesional2 opacity-0  mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">{profesionalText}</p>
     </div >     
  
 </article>
+<script>
+  // Función para manejar las intersecciones
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      // Verificar si el elemento es visible
+      if (entry.isIntersecting) {
+        // Quitar la clase "hidden" para hacer visible el elemento
+        entry.target.classList.remove('invisible');
+        
+        // Limpiar el estado del elemento y reiniciar la animación
+        resetElement(entry.target);
+        
+        // Desactivar el observador una vez que se ha activado la animación
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+  
+  // Función para limpiar el estado del elemento y reiniciar la animación
+  function resetElement(element) {
+    // Eliminar clases de animación
+    element.classList.remove('animate-fade-right', 'animate-once', 'animate-fill-forwards','animate-ease-in',);
+    // Forzar un reflow para que se apliquen los cambios
+    void element.offsetWidth;
+    // Agregar clases de animación nuevamente
+    element.classList.add('animate-fade-right', 'animate-once', 'animate-fill-forwards','animate-ease-in',);
+  }
+  
+  // Opciones para el observador
+  const options = {
+    root: null, // Utiliza el viewport como área de observación
+    threshold: 0.80 // Se activa cuando el 50% del elemento está visible
+  };
+  
+  // Crear un observador
+  const observer = new IntersectionObserver(handleIntersection, options);
+  
+  // Seleccionar todos los elementos con la clase 
+  const targets = document.querySelectorAll('.profesional2');
+  
+  // Observar cada elemento
+  targets.forEach(target => {
+    observer.observe(target);
+  });
+  </script>
+  
+
+</script>
+
