@@ -1,0 +1,6 @@
+{
+	"runtime": "nodejs20.x",
+	"handler": "home/andersson/Proyectos/landing-casa-veterinaria/casa-veterinaria/.vercel/output/_functions/entry.mjs",
+	"launcherType": "Nodejs",
+	"supportsResponseStreaming": true
+}
