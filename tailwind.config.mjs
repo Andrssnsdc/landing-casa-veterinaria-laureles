@@ -8,13 +8,13 @@ export default {
 		  },
 
 		backgroundImage: {
-		  'hero-image': 'url("../src/image/fondo-banner-inicio.webp")',
-		  'hero-image-mobile': 'url("../src/image/fondo-banner-mobile.webp")',
-		  'fondo-servicios-mobile': 'url("../../src/image/fondo-servicios.webp")',
-		  'fondo-vidas': 'url("../src/image/fondo-vidas.webp")',
-		  'fondo-imagen-vidas': 'url("../src/image/fondo-imagen-vidas.webp")',
-		  'fondo-imagen-vidas2': 'url("../src/image/fondo-imagen-vidas2.webp")',
-		  'fondo-profesionales': 'url("../src/image/fondo-profesionales.webp")'
+		  'hero-image': 'url("../fondo-banner-inicio.webp")',
+		  'hero-image-mobile': 'url("../fondo-banner-mobile.webp")',
+		  'fondo-servicios-mobile': 'url("../fondo-servicios.webp")',
+		  'fondo-vidas': 'url("../fondo-vidas.webp")',
+		  'fondo-imagen-vidas': 'url("../fondo-imagen-vidas.webp")',
+		  'fondo-imagen-vidas2': 'url("../fondo-imagen-vidas2.webp")',
+		  'fondo-profesionales': 'url("../fondo-profesionales.webp")'
 		},
 	  },
 	},

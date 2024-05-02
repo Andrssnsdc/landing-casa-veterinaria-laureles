@@ -2,18 +2,17 @@
 interface Props {
 	profesionalTittle: string;
     profesionalSubTittle: string;
-	profesionalText: string;
   profesionalImage: string;
   profesionalAltImage: string;
    
 }
 
-const { profesionalText,profesionalAltImage,profesionalImage,profesionalTittle, profesionalSubTittle} = Astro.props;
+const {profesionalAltImage,profesionalImage,profesionalTittle, profesionalSubTittle} = Astro.props;
 ---
 <article class="px-4 lg:px-0 lg:w-9/12 flex flex-col justify-center items-center  md:flex-row w-full overflow-hidden mb-12">
     
     <div class="relative  md:w-1/2">
-        <img class="-z-10  rounded-full absolute inset-0  animate-spin " src="src/image/fondo-profesionales.webp " alt=""/>
+        <img class="-z-10  rounded-full absolute inset-0  animate-spin " src="../fondo-profesionales.webp " alt=""/>
     
         <img style="mask-image: linear-gradient(white 90%, transparent);" class=" z-50  object-containt " src={profesionalImage} alt={profesionalAltImage} />
       </div>
@@ -21,7 +20,7 @@ const { profesionalText,profesionalAltImage,profesionalImage,profesionalTittle, 
       <div class="flex flex-col w-fit  md:w-1/2  "> 
         <h2 class="profesional2 opacity-0 text-center md:text-end text-3xl sm:text-2xl font-bold  text-purple-700 ">{profesionalTittle}</h2> 
         <h3 class="profesional2 opacity-0 text-center md:text-end text-lg sm:text-xl font-regular  text-purple-700 my-5 md:my-3">{profesionalSubTittle}</h3>
-        <p class="profesional2 opacity-0 md:text-end mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">{profesionalText}</p>
+        <p class="profesional2 opacity-0 md:text-end mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">El Doctor Holman es un cirujano veterinario con <strong class="font-bold">más de 5 años de experiencia enfocada en cirugía y ortopedia</strong>, ha sido las manos salvadoras de más de <strong class="font-bold">5000 animalitos que gracias a su profesionalismo recuperaron su calidad vida</strong>, él será el encargado de realizar los procedimientos quirúrgicos necesarios para la recuperación de tu mascota, te informara y guiara de manera empática y responsable durante todo el proceso que vivirás junto a tu mascota.</p>
     </div >     
  
 </article>

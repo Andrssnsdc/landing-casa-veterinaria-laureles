@@ -2,18 +2,17 @@
 interface Props {
 	profesionalTittle: string;
     profesionalSubTittle: string;
-	profesionalText: string;
   profesionalImage: string;
   profesionalAltImage: string;
    
 }
 
-const { profesionalText,profesionalAltImage,profesionalImage,profesionalTittle, profesionalSubTittle} = Astro.props;
+const { profesionalAltImage,profesionalImage,profesionalTittle, profesionalSubTittle} = Astro.props;
 ---
 <article class="px-4 lg:px-0 lg:w-9/12 flex flex-col justify-center items-center  md:flex-row w-full overflow-hidden mb-12">
     
     <div class="relative md:w-1/2 md:order-2">
-        <img class="-z-10  rounded-full absolute inset-0  animate-spin " src="src/image/fondo-profesionales.webp " alt=""/>
+        <img class="-z-10  rounded-full absolute inset-0  animate-spin " src="../fondo-profesionales.webp " alt=""/>
 
         <img style="mask-image: linear-gradient(white 90%, transparent);" class="z-50  object-cover" src={profesionalImage} alt={profesionalAltImage} />
       </div>
@@ -21,7 +20,7 @@ const { profesionalText,profesionalAltImage,profesionalImage,profesionalTittle, 
       <div class=" flex flex-col   md:w-1/2 "> 
         <h2 class="profesional2 opacity-0   text-center md:text-start text-3xl sm:text-2xl font-bold  text-purple-700 ">{profesionalTittle}</h2> 
         <h3 class="profesional2 opacity-0   text-center md:text-start text-lg sm:text-xl font-regular  text-purple-700 my-5 md:my-3">{profesionalSubTittle}</h3>
-        <p class="profesional2 opacity-0  mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">{profesionalText}</p>
+        <p class="profesional2 opacity-0  mb-3 font-light leading-normal text-stone-900  text-lg sm:text-xl ">La Doctora María Alejandra es nuestra profesional encargada de las <strong class="font-bold">consultas veterinarias </strong> con ella sus pacientes siempre tendrán un <strong class="font-bold">trato amoroso, empático y respetuoso,</strong> sus años de experiencia junto a su conocimiento le han dado las habilidades necesarias para dar <strong class="font-bold">diagnósticos asertivos y oportunos</strong> que permiten preservar la salud de tu mascota. Sus recomendaciones y guia seran el camino más adecuado a seguir para que tu amigo tenga una pronta recuperación y lo veas siempre feliz.</p>
     </div >     
  
 </article>
