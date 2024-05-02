@@ -1,1 +1,0 @@
-function a(e,r){e.forEach(t=>{t.isIntersecting&&s(t.target)})}function s(e){e.classList.remove("animate-shake","animate-twice","animate-fill-backwards"),e.offsetWidth,e.classList.add("animate-shake","animate-twice","animate-fill-backwards")}const o={root:null,threshold:.5},n=new IntersectionObserver(a,o),i=document.querySelectorAll(".boton2");i.forEach(e=>{n.observe(e)});
