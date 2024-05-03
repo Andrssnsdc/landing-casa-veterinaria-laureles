@@ -9,7 +9,7 @@
 			<img
 				src="../Logo.webp"
 				alt="Logo casa veterinaria"
-				
+				loading="lazy"
 				style="width:65qx; height: 65px"
 			/>
 			<span
@@ -31,12 +31,13 @@
 					aria-expanded="false"	
 					
 				>
-					<span class="sr-only">Open main menu</span>
+					<span class="sr-only" >Open main menu</span>
 					<svg
 						class="w-10 h-6"
 						aria-hidden="true"
 						fill="none"
-						viewBox="0 0 17 14"
+						viewBox="0 0 15 15"
+						style="pointer-events: none;"
 					>
 						<path
 							stroke="currentColor"
@@ -54,8 +55,7 @@
 					<ul style="-webkit-border-bottom-right-radius: 200px;
 					-moz-border-radius-bottomright: 200px;
 					border-bottom-right-radius: 200px;"
-						 class="min-[1150px]:pl-60 px-5 h-[500px] font-medium pb-40 md:pb-0 flex flex-col justify-around  items-start md:h-16 md:self-start   md:rounded-l-3xl md:p-1  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 dark:bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 dark:border-gray-700"
-					>
+						 class="min-[1150px]:pl-60 px-5 h-[500px] font-medium pb-40 md:pb-0 flex flex-col justify-around  items-start md:h-16 md:self-start   md:rounded-l-3xl md:p-1  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 bg-gradient-to-b from-purple-700 via-purple-800 to-purple-400 ">
 						<li>
 							<a href="/"
 								class="h-14 flex items-center justify-center flex-row gap-6 hover:border-b-4 hover:border-sky-500 hover:bottom-0 hover:rounded-ls box-sizing:border-box"
@@ -347,7 +347,7 @@
 
 
 
-<script client:load>
+<script>
 	document.addEventListener("DOMContentLoaded", function () {
 	  const menuToggle = document.getElementById("menu-toggle");
 	  const navbarDefault = document.getElementById("navbar-default");

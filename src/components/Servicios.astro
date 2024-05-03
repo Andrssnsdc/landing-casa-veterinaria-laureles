@@ -7,7 +7,7 @@ import Card from '../components/Card.astro';
     <h2 class="text-3xl font-bold text-purple-700 mb-4">Servicios Veterinarios</h2>
     <span class="text-2xl font-light text-purple-700">Desde vacunas hasta terapia especial.</span>
     </div>
-    <div id="scroll" class="flex flex-row mx-4 md:mx-16 overflow-x-scroll bg-fondo-servicios-mobile  "> 
+    <div id="scroll" class="flex flex-row mx-4 md:mx-16 overflow-x-scroll bg-fondo-servicios-mobile w-11/12 "> 
     <div id="card"  >
     <Card
     cardText="Nuestros profesionales, se encargarán de dar un diagnóstico acertado y oportuno de tu mascota."
@@ -126,12 +126,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   cardElements.forEach((card) => {
     card.addEventListener('mouseenter', () => {
-      speed *= 0.25;
+      speed *= 0.15;
       animationRunning = true;
     });
 
     card.addEventListener('mouseleave', () => {
-      speed /= 0.25;
+      speed /= 0.20;
       animationRunning = true;
     });
   });
