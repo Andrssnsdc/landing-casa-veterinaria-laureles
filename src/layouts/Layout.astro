@@ -21,7 +21,15 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/png" href="../logofav.png" />		
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7C9C02B3YE"></script>
+		<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+ 		 gtag('config', 'G-7C9C02B3YE');
+		</script>
 	</head>
 	<body class="absolute top-0 z-[-2] h-screen w-screen absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]">
 	
